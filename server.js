@@ -8,7 +8,7 @@ app.use(middleware.logger);
 app.get("/hakkimda", middleware.requireAuthentication, function(req, res){
     res.send("hakkımda");
 })
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(`${__dirname}/public`))
 app.listen(PORT, function(){
-    console.log("Web Servis Başlatıldı. Port : " + PORT);
+    console.log(`Web Servis Başlatıldı. Port : ${PORT}`);
 });
